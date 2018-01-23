@@ -1,7 +1,7 @@
 {
     "name": "Route Mobile Api Token Requests to Survey",
     "namespace": "MobileApiRequestToSurvey\\ExternalModule",
-    "description": "(...). See the complete <b><a href='https://github.com/ctsit/mobile_api_request_to_survey' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/mobile_api_request_to_survey' target='_blank'>https://github.com/ctsit/mobile_api_request_to_survey</a>",
+    "description": "A REDCap module to route mobile api token requests in the REDCap Mobile App page to a survey. It also provides the option of adding descriptive text to the same page. See the complete <b><a href='https://github.com/ctsit/mobile_api_request_to_survey' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/mobile_api_request_to_survey' target='_blank'>https://github.com/ctsit/mobile_api_request_to_survey</a>",
     "permissions": [
         "redcap_every_page_top"
     ],
@@ -20,13 +20,13 @@
     "system-settings": [
         {
             "key": "mobile-api-request-to-survey-url",
-            "name": "Base URL",
-            "required": false,
+            "name": "URL",
+            "required": true,
             "type": "text"
         },
         {
             "key": "mobile-api-request-to-survey-text",
-            "name": "Text",
+            "name": "Descriptive Text",
             "required": false,
             "type": "textarea"
         }
