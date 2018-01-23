@@ -11,7 +11,7 @@ A REDCap module to route mobile api token requests in the **REDCap Mobile App** 
 - Still in **Control Center > External Modules** configure the module with a URL and an optional descriptive text. Lastly, activate this module for all projects.
 
 ## How to use
-The module requires a URL as part of its setting. In addition, you may provide an optional descriptive text that allows html formatting. Such text will appear on the **REDCap Mobile App** page before the title **What is the REDCap Mobile App?**.
+This module requires a URL to be provided as part of the system settings. In addition, you may provide an optional descriptive text that allows html formatting. Such text will appear on the **REDCap Mobile App** page before the title **What is the REDCap Mobile App?**.
 
 For example, a configuration may look like
 	
