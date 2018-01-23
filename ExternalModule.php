@@ -20,10 +20,14 @@ class ExternalModule extends AbstractExternalModule {
      */
     function redcap_every_page_top($project_id) {
         if (PAGE == 'MobileApp/index.php' && $project_id) {
-        	$dummyText = "Some dummy text";
-        	$this->sendVarToJS('routeMobileApiRequestText', $dummyText);
-            $this->includeJs('js/addText.js');
 
+            $url = $this->getSystemSetting('route-mobile-api-token-requests-to-survey-url');
+            $text = $this->getSystemSetting('route-mobile-api-token-requests-to-survey-text');
+            
+            $this->sendVarToJS('routeMobileApiRequestURL', $url);
+        	$this->sendVarToJS('routeMobileApiRequestText', $text);
+
+            $this->includeJs('js/addText.js');
         }
     }
 
