@@ -20,5 +20,12 @@ An example of a configuration for the system settings is as follows:
 
 	Descriptive Text:
 	<div class="p" style="font-weight:bold;font-size:14px;margin-top:15px;">Mobile Api Request to Survey</div>
-    <div><p>The <b>REDCap Mobile App</b> is an application that gives you the capability to collect your REDCap data in an offline environment (without internet) and sync the data back to your project on the <b>REDCap</b> server when the device is connected to the internet. With <b>REDCap</b> and the <b>REDCap Mobile App</b>, users have new options for electronic data capture for studies that under previous circumstances would have dictated pen and paper due to poor or no internet connection on site.
-	The App is only needed for collecting data offline. You <i>DO NOT</i> need to use the Mobile App to enter data into <b>REDCap</b> from a device. If you have an internet connection, you can simply use a browser to collect data through surveys or data entry forms by navigating to: <b><a href='https://redcap.example.org' target='_blank'>redcap.example.org</a></b>.</p></div>
+	<div><p>The <b>REDCap Mobile App</b> is an application that gives you the capability to collect your REDCap
+	data in an offline environment (without internet) and sync the data back to your project on the <b>REDCap</b>
+	server when the device is connected to the internet. With <b>REDCap</b> and the <b>REDCap Mobile App</b>, 
+	users have new options for electronic data capture for studies that under previous circumstances would
+	have dictated pen and paper due to poor or no internet connection on site.
+	The App is only needed for collecting data offline. You <i>DO NOT</i> need to use the Mobile App to enter
+	data into <b>REDCap</b> from a device. If you have an internet connection, you can simply use a browser
+	to collect data through surveys or data entry forms by navigating to: <b><a href='https://redcap.example.org'
+	target='_blank'>redcap.example.org</a></b>.</p></div>
