@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Provides ExternalModule class for Route Mobile Api Token Requests to Survey.
+ * Provides ExternalModule class for Mobile Api Request to Survey.
  */
 
 namespace MobileApiRequestToSurvey\ExternalModule;
@@ -11,7 +11,7 @@ use ExternalModules\ExternalModules;
 use Form;
 
 /**
- * ExternalModule class for Route Mobile Api Token Requests to Survey.
+ * ExternalModule class for Mobile Api Request to Survey.
  */
 class ExternalModule extends AbstractExternalModule {
     /**
