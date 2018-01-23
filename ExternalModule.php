@@ -4,7 +4,7 @@
  * Provides ExternalModule class for Route Mobile Api Token Requests to Survey.
  */
 
-namespace RouteMobileApiTokenRequestsToSurvey\ExternalModule;
+namespace MobileApiRequestToSurvey\ExternalModule;
 
 use ExternalModules\AbstractExternalModule;
 use ExternalModules\ExternalModules;
@@ -21,11 +21,11 @@ class ExternalModule extends AbstractExternalModule {
     function redcap_every_page_top($project_id) {
         if (PAGE == 'MobileApp/index.php' && $project_id) {
 
-            $url = $this->getSystemSetting('route-mobile-api-token-requests-to-survey-url');
-            $text = $this->getSystemSetting('route-mobile-api-token-requests-to-survey-text');
+            $url = $this->getSystemSetting('mobile-api-request-to-survey-url');
+            $text = $this->getSystemSetting('mobile-api-request-to-survey-text');
             
-            $this->sendVarToJS('routeMobileApiRequestURL', $url);
-        	$this->sendVarToJS('routeMobileApiRequestText', $text);
+            $this->sendVarToJS('mobileApiRequestToSurveyURL', $url);
+        	$this->sendVarToJS('mobileApiRequestToSurveyText', $text);
 
             $this->includeJs('js/addText.js');
         }
