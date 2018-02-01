@@ -20,15 +20,34 @@ class ExternalModule extends AbstractExternalModule {
     function redcap_every_page_top($project_id) {
         if (PAGE == 'MobileApp/index.php' && $project_id) {
 
+            global $user_firstname, $user_lastname, $user_email, $username, $Proj;
+
             // Getting system settings
             $url = $this->getSystemSetting('mobile-api-request-to-survey-url');
             $text = $this->getSystemSetting('mobile-api-request-to-survey-text');
-            
+            $length = sizeof($this->getSystemSetting('mobile-api-request-to-survey-parameters'));
+            $parameter_names = $this->getSystemSetting('mobile-api-request-to-survey-names');
+            $parameter_values = $this->getSystemSetting('mobile-api-request-to-survey-values');
+
+            $settings = [
+                    "user_firstname"=> $user_firstname,
+                    "user_lastname" => $user_lastname,
+                    "user_email" => $user_email,
+                    "project_id" => $project_id,
+                    "username" => $username,
+            ];
+
+            for($i = 0; $i < $length; $i++){
+                if ($parameter_names[$i] and $parameter_values[$i]){
+                    $url .= '&' . filter_var($parameter_names[$i],FILTER_SANITIZE_URL) . 
+                    '=' . $settings[$parameter_values[$i]];
+                }
+            }
+
             // Creating url and text as js variables
             $this->sendVarToJS('mobileApiRequestToSurveyURL', $url);
-        	$this->sendVarToJS('mobileApiRequestToSurveyText', $text);
-
-            // Including js file
+            $this->sendVarToJS('mobileApiRequestToSurveyText', $text);
+            // Include js
             $this->includeJs('js/addTextAndURL.js');
         }
     }
