@@ -44,11 +44,13 @@ class ExternalModule extends AbstractExternalModule {
                 }
             }
 
-            // Creating url and text as js variables
-            $this->sendVarToJS('mobileApiRequestToSurveyURL', $url);
-            $this->sendVarToJS('mobileApiRequestToSurveyText', $text);
-            // Include js
-            $this->includeJs('js/addTextAndURL.js');
+            if($url){
+                // Creating url and text as js variables
+                $this->sendVarToJS('mobileApiRequestToSurveyURL', $url);
+                $this->sendVarToJS('mobileApiRequestToSurveyText', $text);
+                // Include js
+                $this->includeJs('js/addTextAndURL.js');
+            }
         }
     }
 
