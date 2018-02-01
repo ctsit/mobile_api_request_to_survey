@@ -8,24 +8,29 @@ A REDCap module to route mobile api token requests in the **REDCap Mobile App** 
 ## Installation
 - Clone this repo into `<redcap-root>/modules/mobile_api_request_to_survey_v<version_number>`.
 - Go to **Control Center > External Modules** and enable Mobile Api Request to Survey.
-- Still in **Control Center > External Modules** configure the module with a URL and an optional descriptive text. Lastly, activate this module for all projects.
+- Still in **Control Center > External Modules** configure the module with a URL and optionally, a descriptive text. You may also include parameter name-value pairs to be appended to the URL. Lastly, activate this module for all projects.
+
 
 ## How to use
-This module requires a URL to be provided as part of the system settings. In addition, you may include an optional descriptive text, which may include html formatting. Such text will appear on the 'REDCap Mobile App' page before the title 'What is the REDCap Mobile App?'.
-
-An example of a configuration for the system settings is as follows:
+This module requires a URL to be provided as part of the system settings. The following values may be selected to be appended to the URL: 
 	
-	URL: 
-    https://redcap.example.org/surveys/?s=DUPrXGmx3L
+    user_firstname
+    user_lastname
+    email
+    project_id
+    username
+    
+To use the appended parameters, make sure the parameter names you chose coincide with the names of the fields in the target REDCap survey.
 
-	Descriptive Text:
-	<div class="p" style="font-weight:bold;font-size:14px;margin-top:15px;">Mobile Api Request to Survey</div>
-	<div><p>The <b>REDCap Mobile App</b> is an application that gives you the capability to collect your REDCap
-	data in an offline environment (without internet) and sync the data back to your project on the <b>REDCap</b>
-	server when the device is connected to the internet. With <b>REDCap</b> and the <b>REDCap Mobile App</b>, 
-	users have new options for electronic data capture for studies that under previous circumstances would
-	have dictated pen and paper due to poor or no internet connection on site.
-	The App is only needed for collecting data offline. You <i>DO NOT</i> need to use the Mobile App to enter
-	data into <b>REDCap</b> from a device. If you have an internet connection, you can simply use a browser
-	to collect data through surveys or data entry forms by navigating to: <b><a href='https://redcap.example.org'
-	target='_blank'>redcap.example.org</a></b>.</p></div>
+In addition, you may include an optional descriptive text, which may include html formatting. Such text will appear on the 'REDCap Mobile App' page before the title 'What is the REDCap Mobile App?'.
+
+For example, using the configuration below:
+
+![Example Configuration](example_configuration.png)
+
+the rewritten target URL might look like this:
+
+    https://redcap.org/surveys/?s=DUPrXGmx3L&Name=jdoe&Lastname=doe_lastname
+
+and the text 'About the REDCap Mobile App' will be added on the 'REDCap Mobile App' before the title 'What is the REDCap Mobile App?'.
+
