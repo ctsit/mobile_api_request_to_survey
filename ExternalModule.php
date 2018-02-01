@@ -20,9 +20,6 @@ class ExternalModule extends AbstractExternalModule {
     function redcap_every_page_top($project_id) {
         if (PAGE == 'MobileApp/index.php' && $project_id) {
 
-            // Including js file
-            $this->includeJs('js/addTextAndURL.js');
-
             // Getting system settings
             $url = $this->getSystemSetting('mobile-api-request-to-survey-url');
             $text = $this->getSystemSetting('mobile-api-request-to-survey-text');
@@ -30,6 +27,9 @@ class ExternalModule extends AbstractExternalModule {
             // Creating url and text as js variables
             $this->sendVarToJS('mobileApiRequestToSurveyURL', $url);
         	$this->sendVarToJS('mobileApiRequestToSurveyText', $text);
+
+            // Including js file
+            $this->includeJs('js/addTextAndURL.js');
         }
     }
 
