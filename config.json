@@ -34,6 +34,37 @@
             "name": "Descriptive Text",
             "required": false,
             "type": "textarea"
+        },
+        {
+            "key": "mobile-api-request-to-survey-descriptive-text",
+            "name": "Please make sure you provide both a parameter name and a value.",
+            "type": "descriptive"
+        },
+        {
+            "key": "mobile-api-request-to-survey-parameters",
+            "name": "URL parameter name-value pairs",
+            "type": "sub_settings",
+            "repeatable": "true",
+            "sub_settings": [
+                {
+                    "key": "mobile-api-request-to-survey-names",
+                    "name": "Name",
+                    "type": "text"
+                },
+                {
+                    "key": "mobile-api-request-to-survey-values",
+                    "name": "Value",
+                    "type": "dropdown",
+                    "choices":
+                    [
+                        {"value": "user_firstname", "name": "user_firstname"},
+                        {"value": "user_lastname", "name": "user_lastname"},
+                        {"value": "user_email", "name": "user_email"},
+                        {"value": "project_id", "name": "project_id"},
+                        {"value": "username", "name": "username"}
+                    ]
+                }
+            ]
         }
     ],
     "compatibility": {
