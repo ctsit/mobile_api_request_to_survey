@@ -1,8 +1,21 @@
 # Change Log
 All notable changes to the Mobile Api Request to Survey module will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.0] - 2018-02-01
+## [2.0.0] - 2018-02-02
+### Changed
+- Set minimum REDCap verison to 8.0.3 in README (Philip Chase)
+- Check the url exists before sending variables over to js (Marly Cormar)
+
+### Added
+- Add README.md documentation file (Marly Cormar)
+- Add configuration example (Marly Cormar)
+- Append selected parameter name-value pairs to the url (Marly Cormar)
+- Include parameter name-value pairs in the system settings (Marly Cormar)
+
+
+## [1.0.0] - 2018-02-01
 ### Summary
 - This is the first release
 
@@ -35,4 +48,3 @@ All notable changes to the Mobile Api Request to Survey module will be documente
 - Create skeletong for config.json (Marly Cormar)
 - Create skeleton for the ExternalModule.php (Marly Cormar)
 - Initial commit (Philip Chase)
-
