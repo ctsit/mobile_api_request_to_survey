@@ -20,7 +20,7 @@ class ExternalModule extends AbstractExternalModule {
     function redcap_every_page_top($project_id) {
         if (PAGE == 'MobileApp/index.php' && $project_id) {
 
-            global $user_firstname, $user_lastname, $user_email, $username, $Proj;
+            global $user_firstname, $user_lastname, $user_email, $Proj;
 
             // Getting system settings
             $url = $this->getSystemSetting('mobile-api-request-to-survey-url');
@@ -34,7 +34,7 @@ class ExternalModule extends AbstractExternalModule {
                     "user_lastname" => $user_lastname,
                     "user_email" => $user_email,
                     "project_id" => $project_id,
-                    "username" => $username,
+                    "username" => USERID,
             ];
 
             for($i = 0; $i < $length; $i++){
