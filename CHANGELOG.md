@@ -3,6 +3,14 @@ All notable changes to the Mobile Api Request to Survey module will be documente
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.0.1] - 2018-03-14
+### Changed
+- Change global variable username by USERID constant (Marly Cormar)
+
+## Added
+- Add Taryn as an author (Marly Cormar)
+
+
 ## [2.0.0] - 2018-02-02
 ### Changed
 - Set minimum REDCap verison to 8.0.3 in README (Philip Chase)
