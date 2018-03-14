@@ -12,13 +12,15 @@ A REDCap module to route mobile api token requests in the **REDCap Mobile App** 
 
 
 ## How to use
-This module requires a URL to be provided as part of the system settings. The following values may be selected to be appended to the URL:
+This module requires a Base URL to be provided as part of the system settings. The following values may be selected to be appended to the URL:
 
     user_firstname
     user_lastname
     email
     project_id
-    username
+    USERID
+
+The `USERID` field contains the redcap username.
 
 To use the appended parameters, make sure the parameter names you chose coincide with the names of the fields in the target REDCap survey.
 
