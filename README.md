@@ -11,7 +11,7 @@ A REDCap module to route mobile api token requests in the **REDCap Mobile App** 
 - Still in **Control Center > External Modules** configure the module with a URL and optionally, a descriptive text. You may also include parameter name-value pairs to be appended to the URL. Lastly, activate this module for all projects.
 
 
-## How to use
+## How to configure the module
 This module requires a Base URL to be provided as part of the system settings. The following values may be selected to be appended to the URL:
 
     user_firstname
@@ -36,3 +36,6 @@ the rewritten target URL might look like this:
 
 and the text 'About the REDCap Mobile App' will be added on the 'REDCap Mobile App' before the title 'What is the REDCap Mobile App?'.
 
+
+## How to request a mobile token
+To request a token for certain project, go the project and on the left menu under the **Applications** label click the item **REDCap Mobile App**. On the same page, click the button **Request API token**. You will be redirected to the URL provided during the configuration of the module. Once you complete the questionnaire, your token request will be submitted.
