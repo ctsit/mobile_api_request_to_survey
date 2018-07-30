@@ -24,7 +24,7 @@ class ExternalModule extends AbstractExternalModule {
 
             // Getting system settings
             $url = $this->getSystemSetting('mobile-api-request-to-survey-url');
-            $text = $this->getSystemSetting('mobile-api-request-to-survey-text');
+            $text = $this->getSystemSetting('mobile-api-request-to-survey-text') ?: '';
             $length = sizeof($this->getSystemSetting('mobile-api-request-to-survey-parameters'));
             $parameter_names = $this->getSystemSetting('mobile-api-request-to-survey-names');
             $parameter_values = $this->getSystemSetting('mobile-api-request-to-survey-values');
